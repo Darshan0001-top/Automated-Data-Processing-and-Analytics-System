@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automated Data Analytics Dashboard</title>
+    <!-- Use a modern, aesthetic sans-serif font -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Header Section -->
+        <header class="dashboard-header glass">
+            <div class="header-content">
+                <h1>Data Analytics Dashboard</h1>
+                <p>Automated Insights Engine 🚀</p>
+            </div>
+            <div class="header-actions">
+                <button class="btn primary" onclick="refreshData()">Sync Data Pipeline</button>
+            </div>
+        </header>
+
+        <!-- KPI Metrics Row -->
+        <section class="metrics-grid">
+            <div class="metric-card glass hero-metric">
+                <div class="icon-wrapper icon-revenue">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                </div>
+                <h3>Total Gross Revenue</h3>
+                <p class="metric-value">$13,455.00</p>
+                <div class="trend positive"><span>↑</span> +12.5% vs last month</div>
+            </div>
+            <div class="metric-card glass hero-metric">
+                <div class="icon-wrapper icon-aov">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                </div>
+                <h3>Average Order Value</h3>
+                <p class="metric-value">$708.16</p>
+                <div class="trend positive"><span>↑</span> +8.2% vs last month</div>
+            </div>
+            <div class="metric-card glass hero-metric">
+                <div class="icon-wrapper icon-items">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+                </div>
+                <h3>Total Items Processed</h3>
+                <p class="metric-value">70</p>
+                <div class="trend neutral"><span>-</span> Base Volume</div>
+            </div>
+        </section>
+
+        <!-- Dynamic Matplotlib Visualizations Grid -->
+        <section class="charts-grid">
+            <div class="chart-card glass">
+                <div class="chart-header">
+                    <h2>📈 Temporal Sales Trends</h2>
+                    <span class="badge">Live Generated</span>
+                </div>
+                <div class="image-wrapper">
+                    <!-- Loading the image directly from the reports folder we generated earlier -->
+                    <img src="reports/sales_trend.png" alt="Sales Trend Line Chart" id="salesTrendImg">
+                </div>
+            </div>
+            <div class="chart-card glass">
+                <div class="chart-header">
+                    <h2>📂 Revenue by Category Sector</h2>
+                    <span class="badge">Live Generated</span>
+                </div>
+                <div class="image-wrapper">
+                    <img src="reports/category_distribution.png" alt="Category Distribution Bar Chart" id="categoryDistImg">
+                </div>
+            </div>
+        </section>
+
+        <!-- Granular Insights Panel -->
+        <section class="insights-grid">
+            <div class="insight-card glass hover-glow">
+                <h2>🏆 Top Performing Products</h2>
+                <ul class="top-list">
+                    <li>
+                        <div class="rank-badge rank-1">#1</div>
+                        <div class="product-info">
+                            <strong>Laptop Pro</strong>
+                            <span>Volume: 3 Units</span>
+                        </div>
+                        <span class="value">$3,600.00</span>
+                    </li>
+                    <li>
+                        <div class="rank-badge rank-2">#2</div>
+                        <div class="product-info">
+                            <strong>Smartphone</strong>
+                            <span>Volume: 3 Units</span>
+                        </div>
+                        <span class="value">$2,400.00</span>
+                    </li>
+                    <li>
+                        <div class="rank-badge rank-3">#3</div>
+                        <div class="product-info">
+                            <strong>Monitor 24"</strong>
+                            <span>Volume: 10 Units</span>
+                        </div>
+                        <span class="value">$1,800.00</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="insight-card glass hover-glow">
+                <h2>📊 Category Aggregation Data</h2>
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Category Name</th>
+                                <th>Gross Revenue</th>
+                                <th>Total Units</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="cat-label">
+                                        <div class="cat-dot" style="background:#5eead4;"></div>
+                                        Electronics
+                                    </div>
+                                </td>
+                                <td class="revenue-cell highlight-cell">$11,045.00</td>
+                                <td>52</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="cat-label">
+                                        <div class="cat-dot" style="background:#c084fc;"></div>
+                                        Furniture
+                                    </div>
+                                </td>
+                                <td class="revenue-cell">$1,870.00</td>
+                                <td>13</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="cat-label">
+                                        <div class="cat-dot" style="background:#fbbf24;"></div>
+                                        Home Appliances
+                                    </div>
+                                </td>
+                                <td class="revenue-cell">$540.00</td>
+                                <td>5</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
